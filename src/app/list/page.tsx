@@ -37,7 +37,7 @@ const List = () => {
   }, [])
 
   const amount = data.reduce((prev, item) => (prev + item.age), 0)
-
+  console.log('ok')
   return (
     <div>
       <title>List Page {amount}</title>
