@@ -36,9 +36,11 @@ const List = () => {
     }, 1000)
   }, [])
 
+  const amount = data.reduce((prev, item) => (prev + item.age), 0)
+
   return (
     <div>
-      <title>List Page</title>
+      <title>List Page {amount}</title>
       <Table columns={columns} dataSource={data} />
     </div>
   )
