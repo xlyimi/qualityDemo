@@ -1,4 +1,5 @@
 import Table from "@/components/Table";
+import { useEffect, useState } from "react";
 
 const columns = [
   {
@@ -27,12 +28,19 @@ const data = [{
 }]
 
 const List = () => {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    setInterval(() => {
+      setCount(count + 1)
+    }, 1000)
+  }, [])
 
   return (
-    <Table columns={columns} dataSource={data} />
-    // <div>List page
-
-    // </div>
+    <div>
+      <title>List Page</title>
+      <Table columns={columns} dataSource={data} />
+    </div>
   )
 }
 
