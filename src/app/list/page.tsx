@@ -1,5 +1,6 @@
 import Table from "@/components/Table";
 import { useEffect, useState } from "react";
+import Problem from "./Problem";
 
 const columns = [
   {
@@ -41,7 +42,7 @@ const List = () => {
   return (
     <div>
       <title>List Page {amount}</title>
-      <Table columns={columns} dataSource={data} />
+      <Problem />
     </div>
   )
 }
